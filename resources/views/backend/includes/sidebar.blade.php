@@ -158,7 +158,7 @@
                       <a href="#" class="nav-link">
                           <i class="nav-icon fas fa-book"></i>
                           <p>
-                              Pages
+                              Education
                               <i class="fas fa-angle-left right"></i>
                           </p>
                       </a>
@@ -166,10 +166,18 @@
                           <li class="nav-item">
                               <a href="pages/UI/general.html" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
-                                  <p>General</p>
+                                  <p>Education List</p>
                               </a>
                           </li>
                       </ul>
+                      <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{url('/admin/create-education')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Now</p>
+                            </a>
+                        </li>
+                    </ul>
                     </li>
 
                     <li class="nav-item">
