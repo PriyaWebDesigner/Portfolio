@@ -23,4 +23,10 @@ class EducationController extends Controller
         $education->save();
         return redirect()->back();
     }
+
+    public function show ()
+    {
+        $education = Education::get();
+        dd($education);
+    }
 }

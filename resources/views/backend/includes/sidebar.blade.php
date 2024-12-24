@@ -164,9 +164,9 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="pages/UI/general.html" class="nav-link">
+                              <a href="{{url('/admin/show-education')}}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
-                                  <p>Education List</p>
+                                  <p>List</p>
                               </a>
                           </li>
                       </ul>

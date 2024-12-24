@@ -21,4 +21,5 @@ Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('adm
 // Education Routes
 Route::get('/admin/create-education', [EducationController::class, 'create'])->name('education.create');
 Route::post('/admin/store-education', [EducationController::class, 'store'])->name('education.store');
+Route::get('/admin/show-education', [EducationController::class, 'show'])->name('education.show');
 
