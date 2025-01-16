@@ -26,7 +26,8 @@ class EducationController extends Controller
 
     public function show ()
     {
-        $education = Education::get();
-        dd($education);
+        $educations = Education::get();
+        // dd($education);
+        return view ('backend.education.list',compact('educations'));
     }
 }
