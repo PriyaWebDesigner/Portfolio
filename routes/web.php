@@ -22,4 +22,7 @@ Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('adm
 Route::get('/admin/create-education', [EducationController::class, 'create'])->name('education.create');
 Route::post('/admin/store-education', [EducationController::class, 'store'])->name('education.store');
 Route::get('/admin/show-education', [EducationController::class, 'show'])->name('education.show');
+Route::get('/admin/delete-education/{id}', [EducationController::class, 'delete'])->name('education.delete');
+Route::get('/admin/edit/education/{id}', [EducationController::class, 'edit'])->name('education.edit');
+Route::post('/admin/update/education/{id}', [EducationController::class, 'update'])->name('education.update');
 

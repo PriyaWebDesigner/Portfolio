@@ -30,4 +30,16 @@ class EducationController extends Controller
         // dd($education);
         return view ('backend.education.list',compact('educations'));
     }
+
+    public function delete ($id)
+    {
+        $education = Education::find($id);
+        return redirect()->back();
+    }
+
+    public function edit ($id)
+    {
+        $education = Education::find($id);
+        return view ('backend.education.edit',compact('education'));
+    }
 }

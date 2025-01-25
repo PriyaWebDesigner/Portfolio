@@ -25,8 +25,8 @@
                     <td>{{$education->title}}</td>
                     <td>{{$education->institute_name}}</td>
                     <td>
-                      <a href="#" class="btn btn-primary">Edit</a>
-                      <a href="#" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                      <a href="{{url('/admin/edit/education/'.$education->id)}}" class="btn btn-primary">Edit</a>
+                      <a href="{{url('/admin/delete-education/'.$education->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
                     </td>
                   </tr>
                   @endforeach
