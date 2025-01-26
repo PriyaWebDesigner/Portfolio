@@ -154,7 +154,7 @@
           <nav class="mt-2">
               <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                   data-accordion="false">
-                    <li class="nav-item">
+                  <li class="nav-item">
                       <a href="#" class="nav-link">
                           <i class="nav-icon fas fa-book"></i>
                           <p>
@@ -164,47 +164,73 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="{{url('/admin/show-education')}}" class="nav-link">
+                              <a href="{{ url('/admin/show-education') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>List</p>
                               </a>
                           </li>
                       </ul>
                       <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/create-education') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Add Now</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Service
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{url('/admin/create-education')}}" class="nav-link">
+                            <a href="{{ url('/admin/show-service') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/create-service') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Now</p>
                             </a>
                         </li>
                     </ul>
-                    </li>
+                </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Authentication
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="pages/UI/general.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Credential</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="pages/UI/general.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Log Out</p>
-                                </a>
-                            </li>
-                        </ul>
-                      </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Authentication
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="pages/UI/general.html" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Credential</p>
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="pages/UI/general.html" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Log Out</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
               </ul>
           </nav>
           <!-- /.sidebar-menu -->

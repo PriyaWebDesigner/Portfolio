@@ -124,27 +124,23 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach ($educations as $education)
 			<div class="col-md-6">
 				<div class="resume-wrap ftco-animate">
-					<span class="date">2020-2023</span>
-					<h2>Bachelor of Arts (Honours)</h2>
-					<span class="position">Victoria College Institution (Kolkata)</span>
-					<!-- <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-						necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-						into your mouth.</p> -->
+					<span class="date">{{$education->year}}</span>
+					<h2>{{$education->title}}</h2>
+					<span class="position">{{$education->institute_name}}</span>
 				</div>
 			</div>
+			@endforeach
 
-			<div class="col-md-6">
+			{{-- <div class="col-md-6">
 				<div class="resume-wrap ftco-animate">
 					<span class="date">2023-2024</span>
 					<h2>Full Stack Web Developer</h2>
 					<span class="position">Web-Coder It Institute, Dhaka, Bangladesh</span>
-					<!-- <p class="mt-4">A small river named Duden flows by their place and supplies it with the
-						necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-						into your mouth.</p> -->
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </section>

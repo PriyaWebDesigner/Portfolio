@@ -34,6 +34,7 @@ class EducationController extends Controller
     public function delete ($id)
     {
         $education = Education::find($id);
+        $education->delete();
         return redirect()->back();
     }
 
@@ -41,5 +42,18 @@ class EducationController extends Controller
     {
         $education = Education::find($id);
         return view ('backend.education.edit',compact('education'));
+    }
+
+    public function update (Request $request, $id)
+    {
+        $education = Education::find($id);
+
+        $education->year = $request->year;
+        $education->title = $request->title;
+        $education->institute_name = $request->institute_name;
+
+        $education->save();
+        return redirect()->back();
+
     }
 }
