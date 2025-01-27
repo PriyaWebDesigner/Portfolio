@@ -34,5 +34,6 @@
 <!-- ./wrapper -->
 
 @include('backend.includes.script')
+@stack('js')
 </body>
 </html>

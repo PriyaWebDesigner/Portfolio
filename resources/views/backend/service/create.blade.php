@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid">
         <!-- SELECT2 EXAMPLE -->
-        <form action="{{url('/admin/store-education')}}" method="POST" enctype="multipart/form-data" class="form-control">
+        <form action="{{url('/admin/store-service')}}" method="POST" enctype="multipart/form-data" class="form-control">
             @csrf
             <div class="card card-default">
                 <div class="card-header">
@@ -30,7 +30,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Product Description</label>
+                                <label>Service Description</label>
                                 <textarea id="summernote" name="description" class="form-control"></textarea>
                             </div>
                         </div>
