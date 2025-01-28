@@ -29,4 +29,42 @@ class ServiceController extends Controller
         $service->save();
         return redirect()->back();
     }
+    public function serviceShow ()
+    {
+        $services = Service::get();
+        return view ('backend.service.list',compact('services'));
+    }
+    public function serviceDelete ($id)
+    {
+        $service = Service::find($id);
+        $service->delete();
+        return redirect()->back();
+    }
+    public function serviceEdit ($id)
+    {
+        $service = Service::find($id);
+        return view ('backend.service.edit',compact('service'));
+    }
+    public function serviceUpdate (Request $request, $id)
+    {
+        $service = Service::find($id);
+
+        if(isset($request->image)){
+            dd($request->image);
+            if($service->image && file_exists('backend/images/service/'.$service->image)){
+                unlink('backend/images/service/'.$service->image);
+            }
+
+            $imageName = rand().'-service-'.'.'.$request->image->extension();
+            $service->image = $imageName;
+        }
+
+        $service->service_name = $request->service_name;
+        $service->description = $request->description;
+
+        $service->save();
+        return redirect()->back();
+
+    }
+
 }
