@@ -239,7 +239,7 @@
 						<h3 class="mb-5"> Satic Website</h3>
 						<p></p>
 						<p>Static web design refers to websites that are built using only HTML and CSS, without any
-							server-side programming or database integration.</p>
+							server-side programming or database integration</p>
 					</div>
 				</a>
 			</div>
@@ -348,17 +348,19 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6 animate-box">
+				@foreach ($skills as $skill)
 				<div class="progress-wrap ftco-animate">
-					<h3>HTML5</h3>
+					<h3>{{$skill->skill_name}}</h3>
 					<div class="progress">
 						<div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
 							aria-valuemax="100" style="width:90%">
-							<span>90%</span>
+							<span>{{$skill->percentage}}</span>
 						</div>
 					</div>
 				</div>
+				@endforeach
 			</div>
-			<div class="col-md-6 animate-box">
+			{{-- <div class="col-md-6 animate-box">
 				<div class="progress-wrap ftco-animate">
 					<h3>PHP</h3>
 					<div class="progress">
@@ -436,7 +438,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </section>

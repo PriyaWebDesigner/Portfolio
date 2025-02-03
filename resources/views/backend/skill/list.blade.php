@@ -3,7 +3,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Service List</h3>
+            <h3 class="card-title">Education List</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -11,24 +11,20 @@
                 <thead>
                     <tr>
                         <th>SL</th>
-                        <th>Education Year</th>
-                        <th>Title</th>
-                        <th>Institute Nmae</th>
+                        <th>Skill Name</th>
+                        <th>Percentage</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                  @foreach ($services as $service)
+                  @foreach ($skills as $skill)
                   <tr>
                     <td>{{$loop->index+1}}</td>
+                    <td>{{$skill->skill_name}}</td>
+                    <td>{{$skill->percentage}}</td>
                     <td>
-                        <img src="{{asset('backend/images/service/'.$service->image)}}" height="50" width="50">
-                      </td>
-                    <td>{{$service->service_name}}</td>
-                    <td>{!!$service->description!!}</td>
-                    <td>
-                      <a href="{{url('admin/edit-service/'.$service->id)}}" class="btn btn-primary">Edit</a>
-                      <a href="{{url('/admin/delete-service/'.$service->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                      <a href="{{url('/admin/edit-skill/'.$skill->id)}}" class="btn btn-primary">Edit</a>
+                      <a href="{{url('/admin/delete-skill/'.$skill->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
                     </td>
                   </tr>
                   @endforeach

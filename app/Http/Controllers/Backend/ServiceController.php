@@ -50,13 +50,13 @@ class ServiceController extends Controller
         $service = Service::find($id);
 
         if(isset($request->image)){
-            dd($request->image);
             if($service->image && file_exists('backend/images/service/'.$service->image)){
                 unlink('backend/images/service/'.$service->image);
             }
 
             $imageName = rand().'-service-'.'.'.$request->image->extension();
             $service->image = $imageName;
+            
         }
 
         $service->service_name = $request->service_name;
