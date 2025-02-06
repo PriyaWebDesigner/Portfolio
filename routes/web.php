@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\backend\EducationController;
+use App\Http\Controllers\Backend\InterestController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\skillController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -43,4 +44,12 @@ Route::get('/admin/show-skill',[skillController::class, 'skillShow']);
 Route::get('/admin/delete-skill/{id}',[skillController::class, 'skillDelete']);
 Route::get('/admin/edit-skill/{id}',[skillController::class, 'skillEdit']);
 Route::post('/admin/update-skill/{id}',[skillController::class, 'skillUpdate']);
+
+//Interest Routes...
+Route::get('/admin/create-interest',[InterestController::class, 'interestCreate']);
+Route::post('/admin/store-interest',[InterestController::class, 'interestStore']);
+Route::get('/admin/show-interest',[InterestController::class, 'interestShow']);
+Route::get('/admin/delete-interest/{id}',[InterestController::class, 'interestDelete']);
+Route::get('/admin/edit-interest/{id}',[InterestController::class, 'interestEdit']);
+Route::post('/admin/update-interest/{id}',[InterestController::class, 'interestUpdate']);
 
