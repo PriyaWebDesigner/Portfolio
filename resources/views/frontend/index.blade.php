@@ -230,108 +230,21 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach ($services as $service)
 			<div class="col-md-4 text-center d-flex ftco-animate">
 				<a href="#" class="services-1">
 					<span class="icon">
-						<i class="flaticon-analysis"></i>
+						<img class="flaticon-analysis" src="{{asset('backend/images/service/'.$service->image)}}" height="100" width="100">
+						{{-- <i class="flaticon-analysis"></i> --}}
 					</span>
 					<div class="desc">
-						<h3 class="mb-5"> Satic Website</h3>
+						<h3 class="mb-5">{{$service->service_name}}</h3>
 						<p></p>
-						<p>Static web design refers to websites that are built using only HTML and CSS, without any
-							server-side programming or database integration</p>
+						<p>{!!$service->description!!}</p>
 					</div>
 				</a>
 			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-flasks"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Dynamic Website</h3>
-						<p>
-							A dynamic website is a type of website that generates web pages in real-time in response
-							to user input or interaction.
-							dynamic websites are capable of updating content dynamically,</p>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-ideas"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Web Design</h3>
-						<p>Web design refers to the process of creating and designing the visual elements, layout,
-							structure, and overall user experience of websites.</p>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-ideas"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Web Development</h3>
-						<p>A web developer specializes in building and maintaining websites
-							and web applications. They are proficient in various programming languages, frameworks,
-							and technologies used to create dynamic and interactive web experiences.</p>
-					</div>
-				</a>
-			</div>
-			<!-- <div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-flasks"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Web Application</h3>
-						<p>
-							A web application, often abbreviated as "web app," is a software application that is
-							accessed and used through a web browser over a network, typically the internet.web
-							applicationsare accessed through a client-server model via a web browser interface.</p>
-					</div>
-				</a>
-			</div> -->
-
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-analysis"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">App Development</h3>
-						<p>App development, short for application development, refers to the process of creating
-							software applications that run on various platforms such as mobile devices (e.g.,
-							smartphones and tablets), desktop computers, and web browsers</p>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-flasks"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">SEO Advance</h3>
-						<p> SEO Advanced involves deeper analysis, strategic planning, and execution to achieve
-							higher rankings and drive more organic traffic to a website. </p>
-					</div>
-				</a>
-			</div>
-			<!-- <div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="#" class="services-1">
-					<span class="icon">
-						<i class="flaticon-ideas"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Product Strategy</h3>
-					</div>
-				</a>
-			</div> -->
+			@endforeach
 		</div>
 	</div>
 </section>

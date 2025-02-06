@@ -55,6 +55,7 @@ class ServiceController extends Controller
             }
 
             $imageName = rand().'-service-'.'.'.$request->image->extension();
+            $request->image->move('backend/images/service/', $imageName);
             $service->image = $imageName;
             
         }
@@ -63,7 +64,7 @@ class ServiceController extends Controller
         $service->description = $request->description;
 
         $service->save();
-        return redirect()->back();
+        return redirect('/admin/show-service');
 
     }
 
