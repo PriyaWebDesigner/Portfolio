@@ -366,21 +366,22 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach ($interests as $interest)
 			<div class="col-md-4 text-center d-flex ftco-animate">
 				<a href="#" class="services-1">
 					<span class="icon">
-						<i class="flaticon-analysis"></i>
+						<img  class="flaticon-analysis" src="{{asset('backend/images/interest/'.$interest->image)}}" height="100" width="100">
 					</span>
 					<div class="desc">
-						<h3 class="mb-5"> Software Architecture</h3>
+						<h3 class="mb-5">{{$interest->interest_name}}</h3>
 						<p></p>
-						<!-- <p>Static web design refers to websites that are built using only HTML and CSS, without any
-							server-side programming or database integration.</p> -->
+						<p>{!!$interest->description!!}</p>
 					</div>
 				</a>
 			</div>
+			@endforeach
 
-			<div class="col-md-4 text-center d-flex ftco-animate">
+			{{-- <div class="col-md-4 text-center d-flex ftco-animate">
 				<a href="#" class="services-1">
 					<span class="icon">
 						<i class="flaticon-flasks"></i>
@@ -446,7 +447,7 @@
 											server-side programming or database integration.</p> -->
 					</div>
 				</a>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </section>

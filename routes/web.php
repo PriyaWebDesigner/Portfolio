@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\AuthController;
 use App\Http\Controllers\backend\EducationController;
 use App\Http\Controllers\Backend\InterestController;
+use App\Http\Controllers\Backend\MessageController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\skillController;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -52,4 +53,8 @@ Route::get('/admin/show-interest',[InterestController::class, 'interestShow']);
 Route::get('/admin/delete-interest/{id}',[InterestController::class, 'interestDelete']);
 Route::get('/admin/edit-interest/{id}',[InterestController::class, 'interestEdit']);
 Route::post('/admin/update-interest/{id}',[InterestController::class, 'interestUpdate']);
+
+//Contact Routes...
+Route::get('/admin/show/contact-message',[MessageController::class, 'contactMessageShow']);
+Route::get('/admin/delete/contact-message/{id}',[MessageController::class, 'contactMessageDelete']);
 
