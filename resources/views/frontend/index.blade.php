@@ -18,8 +18,8 @@
 							<span class="subheading">Hello!</span>
 							<h1 class="mb-4 mt-3">I'm <span>Priya Naskar</span></h1>
 							<h2 class="mb-4">A Freelancer, Web Designer</h2>
-							<p><a href="#" class="btn btn-warning btn-outline-primary text-dark py-3 px-4">Hire
-									me</a> <a href="#" class="btn btn-outline-primary text-info py-3 px-4">My
+							<p><a href="#contact-section" class="btn btn-warning btn-outline-primary text-dark py-3 px-4">Hire
+									me</a> <a href="#services-section" class="btn btn-outline-primary text-info py-3 px-4">My
 									works</a></p>
 						</div>
 					</div>
@@ -89,13 +89,13 @@
 						</p>
 						<ul class="about-info mt-4 px-md-0 px-2">
 							<li class="d-flex"><span>Name:</span> <span>Priya Naskar</span></li>
-							<li class="d-flex"><span>Date of birth:</span> <span>August 07, 2002</span></li>
+							{{-- <li class="d-flex"><span>Date of birth:</span> <span>August 07, 2002</span></li> --}}
 							<li class="d-flex"><span>Address:</span> <span>Kolkata Leather Complex, Kolkata, West
 									Bengal, India</span>
 							</li>
-							<li class="d-flex"><span>PIN code:</span> <span> 743502</span></li>
+							{{-- <li class="d-flex"><span>PIN code:</span> <span> 743502</span></li> --}}
 							<li class="d-flex"><span>Email:</span> <span>naskartanu111@gmail.com</span></li>
-							<!-- <li class="d-flex"><span>Phone: </span> <span>+1-2234-5678-9-0</span></li> -->
+							<li class="d-flex"><span>Phone: </span> <span>9832854019</span></li>
 						</ul>
 					</div>
 				</div>
@@ -260,8 +260,8 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach ($skills as $skill)
 			<div class="col-md-6 animate-box">
-				@foreach ($skills as $skill)
 				<div class="progress-wrap ftco-animate">
 					<h3>{{$skill->skill_name}}</h3>
 					<div class="progress">
@@ -271,8 +271,9 @@
 						</div>
 					</div>
 				</div>
-				@endforeach
 			</div>
+			@endforeach
+			
 			{{-- <div class="col-md-6 animate-box">
 				<div class="progress-wrap ftco-animate">
 					<h3>PHP</h3>
@@ -656,86 +657,88 @@
 </section>
 
 <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-	<div class="container">
-		<div class="row justify-content-center mb-5 pb-3">
-			<div class="col-md-7 heading-section text-center ftco-animate">
-				<h1 class="big big-2">Contact</h1>
-				<h2 class="mb-4">Contact Me</h2>
-				<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
+				</div>
+			</div>
+	
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Kolkata Leather Complex, Kolkata, West Bengal, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://1234567920">+91 9832854019</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">naskartanu111@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Website</h3>
+						<p><a href="#">webdeveloperpriya.com</a></p>
+					</div>
+				</div>
+			</div>
+			{{-- <form action="{{url('/admin/store/contact-message')}}" method="POST" enctype="multipart/form-data">
+				@csrf	 --}}
+			<div class="row no-gutters block-9">
+				<div class="col-md-6 order-md-last d-flex">
+					<form action="{{url('/admin/store/contact-message')}}"  method="POST" enctype="multipart/form-data" class="bg-light p-4 p-md-5 contact-form">
+						@csrf
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" value="" placeholder="Your Name" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="email" value="" placeholder="Your Email" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="subject" value="" placeholder="Subject" required>
+						</div>
+						<div class="form-group">
+							<textarea name="message" id="" cols="30" rows="7" class="form-control"
+								placeholder="Message" required></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Send Message"
+								class="btn btn-warning btn-outline-primary text-dark  py-3 px-5">
+						</div>
+					</form>
+	
+				</div>
+	
+				<div class="col-md-6 d-flex">
+					<!-- <div class="img" style="background-image: url(image/profile.pic-1.png);"></div> -->
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.1547057818343!2d88.514611674755!3d22.498378035687598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020c61d5df133f%3A0xcb9c8415b03db3df!2sKolkata%20Leather%20Complex!5e0!3m2!1sen!2sin!4v1713243019685!5m2!1sen!2sin"
+						width="600" height="530" style="border: 2px solid black;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 			</div>
 		</div>
-
-		<div class="row d-flex contact-info mb-5">
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-map-signs"></span>
-					</div>
-					<h3 class="mb-4">Address</h3>
-					<p>Kolkata Leather Complex, Kolkata, West Bengal, India</p>
-				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-phone2"></span>
-					</div>
-					<h3 class="mb-4">Contact Number</h3>
-					<p><a href="tel://1234567920">+91 9832854019</a></p>
-				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-paper-plane"></span>
-					</div>
-					<h3 class="mb-4">Email Address</h3>
-					<p><a href="mailto:info@yoursite.com">naskartanu111@gmail.com</a></p>
-				</div>
-			</div>
-			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-				<div class="align-self-stretch box p-4 text-center">
-					<div class="icon d-flex align-items-center justify-content-center">
-						<span class="icon-globe"></span>
-					</div>
-					<h3 class="mb-4">Website</h3>
-					<p><a href="#">webdeveloperpriya.com</a></p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row no-gutters block-9">
-			<div class="col-md-6 order-md-last d-flex">
-				<form action="#" class="bg-light p-4 p-md-5 contact-form">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Your Name">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Your Email">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Subject">
-					</div>
-					<div class="form-group">
-						<textarea name="" id="" cols="30" rows="7" class="form-control"
-							placeholder="Message"></textarea>
-					</div>
-					<div class="form-group">
-						<input type="submit" value="Send Message"
-							class="btn btn-warning btn-outline-primary text-dark  py-3 px-5">
-					</div>
-				</form>
-
-			</div>
-
-			<div class="col-md-6 d-flex">
-				<!-- <div class="img" style="background-image: url(image/profile.pic-1.png);"></div> -->
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.1547057818343!2d88.514611674755!3d22.498378035687598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020c61d5df133f%3A0xcb9c8415b03db3df!2sKolkata%20Leather%20Complex!5e0!3m2!1sen!2sin!4v1713243019685!5m2!1sen!2sin"
-					width="600" height="530" style="border: 2px solid black;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
-		</div>
-	</div>
 </section>
 @endsection

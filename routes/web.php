@@ -55,6 +55,7 @@ Route::get('/admin/edit-interest/{id}',[InterestController::class, 'interestEdit
 Route::post('/admin/update-interest/{id}',[InterestController::class, 'interestUpdate']);
 
 //Contact Routes...
+Route::post('/admin/store/contact-message',[MessageController::class, 'contactMessageStore']);
 Route::get('/admin/show/contact-message',[MessageController::class, 'contactMessageShow']);
 Route::get('/admin/delete/contact-message/{id}',[MessageController::class, 'contactMessageDelete']);
 
