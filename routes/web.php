@@ -6,6 +6,7 @@ use App\Http\Controllers\backend\EducationController;
 use App\Http\Controllers\Backend\InterestController;
 use App\Http\Controllers\Backend\MessageController;
 use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\skillController;
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Auth;
@@ -58,4 +59,14 @@ Route::post('/admin/update-interest/{id}',[InterestController::class, 'interestU
 Route::post('/admin/store/contact-message',[MessageController::class, 'contactMessageStore']);
 Route::get('/admin/show/contact-message',[MessageController::class, 'contactMessageShow']);
 Route::get('/admin/delete/contact-message/{id}',[MessageController::class, 'contactMessageDelete']);
+
+//Site Setting, Hero, About
+Route::get('/admin/show/site-settings',[SiteSettingController::class, 'showSettings']);
+Route::post('/admin/site-settings/update',[SiteSettingController::class, 'updateSettings']);
+
+Route::get('/admin/show/hero',[SiteSettingController::class,'showhero']);
+Route::post('/admin/update/hero',[SiteSettingController::class,'updatehero']);
+
+Route::get('/admin/show/about-us',[SiteSettingController::class,'showAboutUs']);
+Route::post('/admin/update/about-us',[SiteSettingController::class,'updateAboutUs']);
 

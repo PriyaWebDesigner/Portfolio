@@ -22,6 +22,7 @@ class SiteSettingSeeder extends Seeder
                 'twitter' => 'https://x.com/',
                 'facebook' => 'https://www.facebook.com/',
                 'instagram' => 'https://www.instagram.com/',
+                'linked_in' => 'https://www.linkedin.com/feed/',
             ]
         ]; 
         

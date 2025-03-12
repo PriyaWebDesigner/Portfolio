@@ -181,99 +181,134 @@
                   </li>
 
                   <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Service
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/show-service') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>List</p>
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/create-service') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Add Now</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Skills
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/show-skill') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>List</p>
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/create-skill') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Add Now</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Interest
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/show-interest') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>List</p>
+                              </a>
+                          </li>
+                      </ul>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/create-interest') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Add Now</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">
+                          <i class="nav-icon fas fa-book"></i>
+                          <p>
+                              Message
+                              <i class="fas fa-angle-left right"></i>
+                          </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                              <a href="{{ url('/admin/show/contact-message') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>List</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+
+                  <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                            Service
+                            Settings
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/admin/show-service') }}" class="nav-link">
+                            <a href="{{ url('/admin/show/site-settings') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>List</p>
+                                <p>Site Settings</p>
                             </a>
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/admin/create-service') }}" class="nav-link">
+                            <a href="{{ url('/admin/show/hero') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add Now</p>
+                                <p>Hero</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ url('/admin/show/about-us') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>About Us</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Skills
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ url('/admin/show-skill')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>List</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ url('/admin/create-skill')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Now</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Interest
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ url('/admin/show-interest') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>List</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ url('/admin/create-interest') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Now</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Message
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ url('/admin/show/contact-message') }}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>List</p>
-                            </a>
-                        </li>
-                    </ul>
 
                   <li class="nav-item">
                       <a href="#" class="nav-link">
