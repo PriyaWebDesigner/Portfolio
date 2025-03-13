@@ -3,37 +3,31 @@
 @section('content')
     <div class="container-fluid">
         <!-- SELECT2 EXAMPLE -->
-        <form action="{{url('/admin/update-interest/'.$interest->id)}}" method="POST" enctype="multipart/form-data" class="form-control">
+        <form action="{{url('/admin/update/hero')}}" method="POST" enctype="multipart/form-data" class="form-control">
             @csrf
             <div class="card card-default">
                 <div class="card-header">
-                    <h3 class="card-title">Edit Interest</h3>
+                    <h3 class="card-title">Hero Page</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Image*</label>
-                                <input type="file" accept="image/*" name="image" value="{{$interest->image}}" class="form-control"
-                                    required>
-                            </div>
-                            <img class="mb-2" src="{{asset('backend/images/interest/'.$interest->image)}}" height="50" width="50">
-                        </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Interest Name*</label>
-                                <input type="text" name="interest_name" value="{{$interest->interest_name}}" class="form-control"
+                                <label>Hero Title*</label>
+                                <input type="text" name="title" value="{{$hero->title}}" class="form-control"
                                     placeholder="Enter your title*" required>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label>Interest Description</label>
-                                <textarea id="summernote" name="description" class="form-control">{{$interest->description}}</textarea>
+                                <label>Image*</label>
+                                <input type="file" accept="image/*" name="image" value="{{$hero->image}}" class="form-control"
+                                    required>
                             </div>
+                            <img class="mb-2" src="{{asset('backend/images/hero/'.$hero->image)}}" height="50" width="50">
                         </div>
 
                         <div class="col-md-12">

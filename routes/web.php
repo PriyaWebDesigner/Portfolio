@@ -61,12 +61,12 @@ Route::get('/admin/show/contact-message',[MessageController::class, 'contactMess
 Route::get('/admin/delete/contact-message/{id}',[MessageController::class, 'contactMessageDelete']);
 
 //Site Setting, Hero, About
-Route::get('/admin/show/site-settings',[SiteSettingController::class, 'showSettings']);
+Route::get('/admin/site-settings',[SiteSettingController::class, 'showSettings']);
 Route::post('/admin/site-settings/update',[SiteSettingController::class, 'updateSettings']);
 
-Route::get('/admin/show/hero',[SiteSettingController::class,'showhero']);
+Route::get('/admin/hero',[SiteSettingController::class,'showhero']);
 Route::post('/admin/update/hero',[SiteSettingController::class,'updatehero']);
 
-Route::get('/admin/show/about-us',[SiteSettingController::class,'showAboutUs']);
+Route::get('/admin/about-us',[SiteSettingController::class,'showAboutUs']);
 Route::post('/admin/update/about-us',[SiteSettingController::class,'updateAboutUs']);
 

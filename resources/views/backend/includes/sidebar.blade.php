@@ -286,7 +286,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/admin/show/site-settings') }}" class="nav-link">
+                            <a href="{{ url('/admin/site-settings') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Site Settings</p>
                             </a>
@@ -294,7 +294,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/admin/show/hero') }}" class="nav-link">
+                            <a href="{{ url('/admin/hero') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Hero</p>
                             </a>
@@ -302,7 +302,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ url('/admin/show/about-us') }}" class="nav-link">
+                            <a href="{{ url('/admin/about-us') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>About Us</p>
                             </a>

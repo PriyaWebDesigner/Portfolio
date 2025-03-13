@@ -1,92 +1,92 @@
 @extends('backend.master')
 
 @section('content')
-<div class="container-fluid">
-    <!-- SELECT2 EXAMPLE -->
-    <form action="{{url('/admin/site-settings/update')}}" method="POST" enctype="multipart/form-data" class="form-control">
-        @csrf
-        <div class="card card-default">
-            <div class="card-header">
-                <h3 class="card-title">Site Setting</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Name*</label>
-                            <input type="text" name="phone" value="" class="form-control"
-                                placeholder="Enter phone number*" required>
+    <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <form action="{{ url('/admin/site-settings/update') }}" method="POST" enctype="multipart/form-data"
+            class="form-control">
+            @csrf
+            <div class="card card-default">
+                <div class="card-header">
+                    <h3 class="card-title">Site Setting</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Name*</label>
+                                <input type="text" name="name" value="{{ $siteSetting->name }}" class="form-control"
+                                    placeholder="Enter your name*" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Address*</label>
-                            <textarea id="summernote" name="address" required>
-
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Address*</label>
+                                <textarea id="summernote" name="address" required>{{ $siteSetting->address }}
                             </textarea>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Email*</label>
-                            <input type="email" name="email" value="" class="form-control"
-                                placeholder="Enter email*" required>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Email*</label>
+                                <input type="email" name="email" value="{{ $siteSetting->email }}" class="form-control"
+                                    placeholder="Enter email*" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Phone*</label>
-                            <input type="text" name="phone" value="" class="form-control"
-                                placeholder="Enter phone number*" required>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Phone*</label>
+                                <input type="text" name="phone" value="{{ $siteSetting->phone }}" class="form-control"
+                                    placeholder="Enter phone number*" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Twitter</label>
-                            <input type="text" name="twitter" value="" class="form-control"
-                                placeholder="Enter twitter link">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Twitter</label>
+                                <input type="text" name="twitter" value="{{ $siteSetting->twitter }}"
+                                    class="form-control" placeholder="Enter twitter link">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Facebook</label>
-                            <input type="text" name="facebook" value="" class="form-control"
-                                placeholder="Enter facebook link">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Facebook</label>
+                                <input type="text" name="facebook" value="{{ $siteSetting->facebook }}"
+                                    class="form-control" placeholder="Enter facebook link">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Instagram</label>
-                            <input type="text" name="instagram" value="" class="form-control"
-                                placeholder="Enter instagram link" >
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Instagram</label>
+                                <input type="text" name="instagram" value="{{ $siteSetting->instagram }}"
+                                    class="form-control" placeholder="Enter instagram link">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Linked In</label>
-                            <input type="text" name="youtube" value="" class="form-control"
-                                placeholder="Enter youtube link">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Linked In</label>
+                                <input type="text" name="linked_in" value="{{ $siteSetting->linked_in }}"
+                                    class="form-control" placeholder="Enter youtube link">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-12 mt-3">
-                        <div class="form-group">
-                            <input type="submit" value="Update" class="form-control btn btn-success">
+                        <div class="col-md-12 mt-3">
+                            <div class="form-group">
+                                <input type="submit" value="Update" class="form-control btn btn-success">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 @endsection
 
 @push('js')
