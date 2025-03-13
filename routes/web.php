@@ -70,3 +70,6 @@ Route::post('/admin/update/hero',[SiteSettingController::class,'updatehero']);
 Route::get('/admin/about-us',[SiteSettingController::class,'showAboutUs']);
 Route::post('/admin/update/about-us',[SiteSettingController::class,'updateAboutUs']);
 
+Route::get('/admin/work-interest',[SiteSettingController::class,'showWorkInterest']);
+Route::post('/admin/update/work-interest',[SiteSettingController::class,'updateWorkInterest']);
+

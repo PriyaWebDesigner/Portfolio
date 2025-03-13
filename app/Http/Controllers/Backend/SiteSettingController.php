@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\Hero;
 use App\Models\SiteSetting;
+use App\Models\WorkInterest;
 use Illuminate\Http\Request;
 
 class SiteSettingController extends Controller
@@ -91,5 +92,34 @@ class SiteSettingController extends Controller
         $aboutUs->save();
         return redirect()->back();
 
+    }
+
+    //Work Interest
+    public function showWorkInterest ()
+    {
+        $workInterest = WorkInterest::first();
+        return view ('backend.settings.work-interest',compact('workInterest'));
+    } 
+
+    public function updateWorkInterest (Request $request)
+    {
+        $workInterest = WorkInterest::first();
+        
+        $workInterest->title = $request->title;
+
+        if(isset($request->image)){
+
+            if($workInterest->image && file_exists('backend/images/work-interest/'.$workInterest->image)){
+                unlink('backend/images/work-interest/'.$workInterest->image);
+            }
+
+            $imageName = rand().'-work-interest-'.'.'.$request->image->extension();  //6578-work-interest-.jpg
+            $request->image->move('backend/images/work-interest/',$imageName);
+            $workInterest->image = $imageName;
+
+        }
+
+        $workInterest->save();
+        return redirect()->back();
     }
 }
