@@ -8,15 +8,20 @@
 			<div class="container">
 				<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
 					data-scrollax-parent="true">
-					<div class="one-third js-fullheight order-md-last img"
+					{{-- <div class="one-third js-fullheight order-md-last img"
 						style="background-image:url({{asset('frontend/assets/image/Priya\ HD\ half\ pic\ png2\ copy.png')}});">
 						<div class="overlay"></div>
-					</div>
+					</div> --}}
+					<div class="one-third js-fullheight order-md-last img"
+					style="background-image:url({{asset('frontend/assets/image/'.$hero->image)}});">
+					<div class="overlay"></div>
+				</div>
 					<div class="one-forth d-flex  align-items-center ftco-animate"
 						data-scrollax=" properties: { translateY: '70%' }">
 						<div class="text">
 							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3">I'm <span>Priya Naskar</span></h1>
+							{{-- <h1 class="mb-4 mt-3">I'm <span>Priya Naskar</span></h1> --}}
+							<h1 class="mb-4 mt-3">I'm <span>{{$hero->title}}</span></h1>
 							<h2 class="mb-4">A Freelancer, Web Designer</h2>
 							<p><a href="#contact-section" class="btn btn-warning btn-outline-primary text-dark py-3 px-4">Hire
 									me</a> <a href="#services-section" class="btn btn-outline-primary text-info py-3 px-4">My
@@ -32,10 +37,14 @@
 			<div class="container">
 				<div class="row d-flex no-gutters slider-text align-items-end justify-content-end"
 					data-scrollax-parent="true">
-					<div class="one-third js-fullheight order-md-last img"
+					{{-- <div class="one-third js-fullheight order-md-last img"
 						style="background-image:url({{asset('frontend/assets/image/Priya\ HD\ half\ pic\ png2\ copy.png')}});">
 						<div class="overlay"></div>
-					</div>
+					</div> --}}
+					<div class="one-third js-fullheight order-md-last img"
+					style="background-image:url({{asset('frontend/assets/image/'.$hero->image)}});">
+					<div class="overlay"></div>
+				</div>
 					<div class="one-forth d-flex align-items-center ftco-animate"
 						data-scrollax=" properties: { translateY: '70%' }">
 						<div class="text">
@@ -68,34 +77,15 @@
 					<div class="col-md-12 heading-section ftco-animate">
 						<h1 class="big">About</h1>
 						<h2 class="mb-4">About Me</h2>
-						<p>Hey there, I'm Priya, an ambitious full-stack web developer with a passion for crafting
-							immersive digital experiences. Hailing from Bangladesh, I recently wrapped up an
-							intensive training program at Webcoder IT, where I delved into the intricacies of web
-							development.
-
-							During my course, I embarked on a journey of discovery, tackling numerous small-scale
-							projects that allowed me to flex my creative muscles and dive deep into the world of
-							coding. Armed with proficiency in HTML, CSS, JavaScript, and more, I've honed my skills
-							across the entire web development spectrum.
-						</p>
-						<p>
-							What sets me apart is my unwavering commitment to excellence and my relentless pursuit
-							of innovation. From designing sleek, intuitive interfaces to architecting robust backend
-							systems, I thrive on the challenges that come with building dynamic web solutions.
-
-							Now, as I embark on the exciting journey of securing my place in the industry, I'm eager
-							to bring my unique blend of technical expertise and creative flair to the table. Let's
-							collaborate on something extraordinary and make waves in the digital landscape together.
-						</p>
+						<p>{!!$aboutUs->description!!}</p>
 						<ul class="about-info mt-4 px-md-0 px-2">
-							<li class="d-flex"><span>Name:</span> <span>Priya Naskar</span></li>
+							<li class="d-flex"><span>Name:</span> <span>{{$siteSettingData->name}}</span></li>
 							{{-- <li class="d-flex"><span>Date of birth:</span> <span>August 07, 2002</span></li> --}}
-							<li class="d-flex"><span>Address:</span> <span>Kolkata Leather Complex, Kolkata, West
-									Bengal, India</span>
+							<li class="d-flex"><span>Address:</span> <span>{{$siteSettingData->address}}</span>
 							</li>
 							{{-- <li class="d-flex"><span>PIN code:</span> <span> 743502</span></li> --}}
-							<li class="d-flex"><span>Email:</span> <span>naskartanu111@gmail.com</span></li>
-							<li class="d-flex"><span>Phone: </span> <span>9832854019</span></li>
+							<li class="d-flex"><span>Email:</span> <span>{{$siteSettingData->email}}</span></li>
+							<li class="d-flex"><span>Phone: </span> <span>{{$siteSettingData->phone}}</span></li>
 						</ul>
 					</div>
 				</div>
@@ -673,7 +663,8 @@
 							<span class="icon-map-signs"></span>
 						</div>
 						<h3 class="mb-4">Address</h3>
-						<p>Kolkata Leather Complex, Kolkata, West Bengal, India</p>
+						{{-- <p>Kolkata Leather Complex, Kolkata, West Bengal, India</p> --}}
+						<p>{{$siteSettingData->address}}</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -682,7 +673,7 @@
 							<span class="icon-phone2"></span>
 						</div>
 						<h3 class="mb-4">Contact Number</h3>
-						<p><a href="tel://1234567920">+91 9832854019</a></p>
+						<p><a href="tel://1234567920">{{$siteSettingData->phone}}</a></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -691,7 +682,7 @@
 							<span class="icon-paper-plane"></span>
 						</div>
 						<h3 class="mb-4">Email Address</h3>
-						<p><a href="mailto:info@yoursite.com">naskartanu111@gmail.com</a></p>
+						<p><a href="mailto:info@yoursite.com">{{$siteSettingData->email}}</a></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
