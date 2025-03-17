@@ -47,6 +47,7 @@ class SiteSettingController extends Controller
         $hero = Hero::first();
         
         $hero->title = $request->title;
+        $hero->sub_title = $request->sub_title;
 
         if(isset($request->image)){
 

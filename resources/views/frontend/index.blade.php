@@ -8,12 +8,8 @@
 			<div class="container">
 				<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
 					data-scrollax-parent="true">
-					{{-- <div class="one-third js-fullheight order-md-last img"
-						style="background-image:url({{asset('frontend/assets/image/Priya\ HD\ half\ pic\ png2\ copy.png')}});">
-						<div class="overlay"></div>
-					</div> --}}
 					<div class="one-third js-fullheight order-md-last img"
-					style="background-image:url({{asset('frontend/assets/image/'.$hero->image)}});">
+					style="background-image:url({{asset('backend/images/hero/'.$hero->image)}});">
 					<div class="overlay"></div>
 				</div>
 					<div class="one-forth d-flex  align-items-center ftco-animate"
@@ -21,8 +17,8 @@
 						<div class="text">
 							<span class="subheading">Hello!</span>
 							{{-- <h1 class="mb-4 mt-3">I'm <span>Priya Naskar</span></h1> --}}
-							<h1 class="mb-4 mt-3">I'm <span>{{$hero->title}}</span></h1>
-							<h2 class="mb-4">A Freelancer, Web Designer</h2>
+							<h1 class="mb-4 mt-3"><span>{{$hero->title}}</span></h1>
+							<h2 class="mb-4">{{$hero->sub_title}}</h2>
 							<p><a href="#contact-section" class="btn btn-warning btn-outline-primary text-dark py-3 px-4">Hire
 									me</a> <a href="#services-section" class="btn btn-outline-primary text-info py-3 px-4">My
 									works</a></p>
@@ -32,24 +28,24 @@
 			</div>
 		</div>
 
-		<div class="slider-item">
+		{{-- <div class="slider-item">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row d-flex no-gutters slider-text align-items-end justify-content-end"
 					data-scrollax-parent="true">
-					{{-- <div class="one-third js-fullheight order-md-last img"
+					<div class="one-third js-fullheight order-md-last img"
 						style="background-image:url({{asset('frontend/assets/image/Priya\ HD\ half\ pic\ png2\ copy.png')}});">
 						<div class="overlay"></div>
-					</div> --}}
+					</div>
 					<div class="one-third js-fullheight order-md-last img"
-					style="background-image:url({{asset('frontend/assets/image/'.$hero->image)}});">
+					style="background-image:url({{asset('backend/images/hero/'.$hero->image)}});">
 					<div class="overlay"></div>
 				</div>
 					<div class="one-forth d-flex align-items-center ftco-animate"
 						data-scrollax=" properties: { translateY: '70%' }">
 						<div class="text">
 							<span class="subheading">Hello!</span>
-							<h1 class="mb-4 mt-3">I'm a <span>Full Stack </span>Web Developer </h1>
+							<h1 class="mb-4 mt-3"><span>I'm a Full Stack Web Developer </span></h1>
 							<p><a href="#" class="btn btn-warning btn-outline-primary text-dark py-3 px-4">Hire
 									me</a> <a href="#" class="btn btn-outline-primary text-info  py-3 px-4">My
 									works</a></p>
@@ -57,7 +53,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 	</div>
 </section>
 
@@ -68,7 +64,7 @@
 				<div class="img-about img d-flex align-items-stretch">
 					<div class="overlay"></div>
 					<div class="img d-flex align-self-stretch align-items-center"
-						style="background-image:url({{asset('frontend/assets/image/about.img.png')}});">
+						style="background-image:url({{asset('backend/images/aboutUs/'.$aboutUs->image)}});">
 					</div>
 				</div>
 			</div>
@@ -632,12 +628,11 @@
 	</div>
 </section> -->
 
-<section class="ftco-section ftco-hireme img margin-top" style="background-image: url({{asset('frontend/assets/images/bg_1.jpg')}})">
+<section class="ftco-section ftco-hireme img margin-top" style="background-image: url({{asset('backend/images/work-interest/'.$workInterest->image)}})">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 ftco-animate text-center">
-				<h2>I'm <span>Available to work as a freelancer</span> or full-time Web Development
-					Specialist</h2>
+				<h2>{{$workInterest->title}}</h2>
 				<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
 				<p class="mb-0"><a href="#" class="btn btn-warning btn-outline-primary text-dark py-3 px-5">Hire
 						me</a></p>

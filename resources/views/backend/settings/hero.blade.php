@@ -23,6 +23,14 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label>Hero Sub Title*</label>
+                                <input type="text" name="sub_title" value="{{$hero->sub_title}}" class="form-control"
+                                    placeholder="Enter your sub title*" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
                                 <label>Image*</label>
                                 <input type="file" accept="image/*" name="image" value="{{$hero->image}}" class="form-control"
                                     required>

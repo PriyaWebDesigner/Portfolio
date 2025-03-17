@@ -16,6 +16,7 @@ class HeroSeeder extends Seeder
         $hero = [
             [
                 'title' => 'Web Developer',
+                'Sub_title' => 'Developer',
                 'image' => 'image.png',
             ]
         ]; 
